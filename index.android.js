@@ -1,6 +1,5 @@
 'use strict'
 
-import snowflake from './src/snowflake'
+import snowflake from './src/renke'
 
 snowflake('android')
-

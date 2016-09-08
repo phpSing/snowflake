@@ -237,20 +237,23 @@ export function getSessionToken () {
     return new AppAuthToken().getSessionToken()
 
       .then((token) => {
+          console.log(token);
         if (token) {
           dispatch(sessionTokenRequestSuccess(token))
           dispatch(logoutState())
           Actions.Tabbar()
         } else {
-          dispatch(sessionTokenRequestFailure())
-          Actions.InitialLoginForm()
+        //   dispatch(sessionTokenRequestFailure())
+          console.log('getting loging form');
+          dispatch(loginState())
+          Actions.Login()
         }
       })
 
       .catch((error) => {
         dispatch(sessionTokenRequestFailure(error))
         dispatch(loginState())
-        Actions.InitialLoginForm()
+        Actions.Login()
       })
   }
 }

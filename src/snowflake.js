@@ -166,8 +166,10 @@ export default function native (platform) {
       return (
 
         <Provider store={store}>
+
           <Router sceneStyle={{ backgroundColor: 'white' }}>
             <Scene key='root' hideNavBar>
+
               <Scene key='App'
                 component={App}
                 type='replace'
@@ -220,6 +222,7 @@ export default function native (platform) {
                   hideNavBar
                   component={Profile} />
               </Scene>
+
             </Scene>
           </Router>
         </Provider>

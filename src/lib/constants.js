@@ -54,4 +54,7 @@ export default keyMirror({
   LOGIN: null,
   REGISTER: null
 
+  // kidswant
+  
+
 })
